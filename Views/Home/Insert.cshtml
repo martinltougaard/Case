@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Indsæt Produkt";
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <h1>Tilføj et produkt</h1>
+    <form method="post" asp-controller="Home" asp-action="Insert">
+        <input type="number" id="ProductID" name="ProductID"></input><br>
+        <label for="Name">Navn</label><br>
+        <input type="text" id="Name" name="Name"></input><br>
+        <label for="Description">Beskrivelse</label><br>
+        <input type="text" id="Description" name="Description"></input><br>
+        <input type="submit" value="Indsæt produkt">
+    </form>
+    @ViewBag.Product
+</body>
+
+</html>
